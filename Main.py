@@ -1,3 +1,6 @@
+from Read import Read
+import easygui
+import os
 #Menu
 
 Menu=True
@@ -33,8 +36,10 @@ opcion=ObtenerOpcion()
 
 while Menu:
     if opcion==1:
-        print("opcion1")
-
+        print("[OPCION] CARGAR DATA\n[DATA] Ingrese la direccion del archivo")
+        ruta=easygui.fileopenbox()
+        Read.ObtenerDatosDocumento(".data",ruta,"DATA")
+        
         MenuLlave[0]=True
     elif opcion==2:
         print("opcion2")
@@ -52,7 +57,7 @@ while Menu:
         print("SALIENDO...")
         Menu=False
     else:
-        print("ERROR: La opcion no existe")
+        print("[ERROR]: La opcion no existe")
     if opcion!=5:
         StringMenu()
         opcion=ObtenerOpcion()
