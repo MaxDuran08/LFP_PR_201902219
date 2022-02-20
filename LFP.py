@@ -29,16 +29,16 @@ class Lfp:
                 if str(I[i][0]).upper()==str("Nombre").upper():
                     #print("["+str(clave)+"]:"+str(valor))
                     self.Nombre=str(I[i][1])
-                elif str(I[i][0]).upper()==str("Grafica").upper():
+                elif str(I[i][0]).upper()==str("Grafica").upper() or str(I[i][0]).upper()==str("Gráfica").upper():
                     #print("["+str(clave)+"]:"+str(valor))
                     self.Grafica=str(I[i][1])
-                elif str(I[i][0]).upper()==str("Titulo").upper():
+                elif str(I[i][0]).upper()==str("Titulo").upper() or str(I[i][0]).upper()==str("Título").upper():
                     #print("["+str(clave)+"]:"+str(valor))
                     self.Titulo=str(I[i][1])
-                elif str(I[i][0]).upper()==str("TituloX").upper():
+                elif str(I[i][0]).upper()==str("TituloX").upper() or str(I[i][0]).upper()==str("TítuloX").upper():
                     #print("["+str(clave)+"]:"+str(valor))
                     self.TituloX=str(I[i][1])
-                elif str(I[i][0]).upper()==str("TituloY").upper():
+                elif str(I[i][0]).upper()==str("TituloY").upper() or str(I[i][0]).upper()==str("TítuloY").upper():
                     #print("["+str(clave)+"]:"+str(valor))
                     self.TituloY=str(I[i][1])
                 i+=1
@@ -46,9 +46,10 @@ class Lfp:
             if len(self.Nombre)>=1 and len(self.Grafica)>=1:
                 self.Existe=True
                 self.GeneracionError=False
+            
 
         except:
-            print("[ERROR-LFP]: Error al guardar datos")
+            print("[ERROR-CARGA DE INSTRUCCIONES]: Error al guardar datos")
             self.GeneracionError=True
     
     def __str__(self):

@@ -18,13 +18,16 @@ class Data:
             #print("3")
             self.Año=Listacabecera[0][1]
             #print("4")
+
+
+
             self.Productos=ListaFinal
 
             if len(self.Mes)>=1 and len(self.Año)>=1 and len(self.Productos)>=1:
                 self.Existe=True
                 self.GeneracionError=False
         except:
-            print("[ERROR-DATA]: Error al guardar datos")
+            print("[ERROR-CARGAR DATA]: Error al guardar datos")
             self.GeneracionError=True
                 
 
